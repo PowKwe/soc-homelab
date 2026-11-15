@@ -4,8 +4,7 @@ A small, isolated Security Operations lab for practising telemetry collection, d
 
 ## Architecture
 
-<img width="1348" height="213" alt="soc-homelab" src="https://github.com/user-attachments/assets/87ac1d66-f2ee-45f3-8fe1-e3251e6ca410" />
-
+<img width="822" height="342" alt="soc-homelab drawio" src="https://github.com/user-attachments/assets/32c59600-2d57-424f-b353-5c123327db06" />
 
 
 - **Lab network:** 10.10.10.0/24 on a direct Ethernet cable, with no DHCP and no default gateway. Addresses are grouped by role in blocks of ten: attacker at .5, Windows workstations at .30, the SIEM at .40.
