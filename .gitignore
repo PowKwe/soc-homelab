@@ -1,0 +1,44 @@
+# Credentials and password material
+wordlists/
+**/loot/
+*.loot
+*.pot
+*.hydra
+.env
+*.key
+*.pem
+*.pfx
+*.kdbx
+
+# Raw exports and captured data
+exports/
+*.csv
+*.pcap
+*.pcapng
+*.evtx
+*.zip
+*.7z
+
+# Virtual machines and disk images
+*.vhd
+*.vhdx
+*.vmcx
+*.vmrs
+*.iso
+*.ova
+*.ovf
+
+# Local tooling and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Scratch and temporary files
+tmp/
+scratch/
+*.tmp
+*.bak
