@@ -4,22 +4,8 @@ A small, isolated Security Operations lab for practising telemetry collection, d
 
 ## Architecture
 
-```mermaid
-flowchart LR
-    subgraph PC["PC: Windows 11 Pro, Hyper-V"]
-        WS01["ws01: Windows 11 victim<br/>Sysmon + Splunk Universal Forwarder"]
-        KALI["kali: attacker"]
-        SW["Lab-Switch (External)"]
-        SW --- WS01
-        SW --- KALI
-    end
-    subgraph MINT["Laptop: Linux Mint"]
-        SPL["Splunk Enterprise 10.4.2<br/>TCP 9997 (forwarding)<br/>TCP 8000 (web)"]
-    end
-    KALI -- "RDP 3389" --> WS01
-    WS01 -- "Sysmon, Security, PowerShell logs" --> SPL
-    PC == "Ethernet, 10.10.10.0/24, no gateway" === MINT
-```
+<img width="822" height="342" alt="soc-homelab drawio" src="https://github.com/user-attachments/assets/32c59600-2d57-424f-b353-5c123327db06" />
+
 
 - **Lab network:** 10.10.10.0/24 on a direct Ethernet cable, with no DHCP and no default gateway. Addresses are grouped by role in blocks of ten: attacker at .5, Windows workstations at .30, the SIEM at .40.
 - **Firewall:** on the SIEM, ufw allows forwarding and web access only from the lab subnet. Remote access to the web UI goes over Tailscale, on the tailnet interface only.
